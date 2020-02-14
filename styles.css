@@ -1,0 +1,124 @@
+/*General*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+a {
+    color: #262626;
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+/*Nav Stuff*/
+.logo {
+    max-width: 180px;
+}
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+}
+.main-menu li {
+    padding: 0 20px;
+}
+.main-menu {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin-left: 10px;
+    font-weight: 700;
+}
+.main-menu li a {
+    padding-bottom: 2.5px;
+}
+.main-menu li a:hover {
+    border-bottom: 4px solid #262626;
+}
+.right-icons {
+    display: flex;
+    align-items: center;
+}
+.right-icons li {
+    padding: 0 10px;
+}
+.right-icons a:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+.fab{
+    font-size: 25px;
+    color: #262626;
+}
+.fas{
+    font-size: 20px;
+    color: #262626;
+}
+/*Mobile Nav Stuff*/
+.fa-bars {
+    font-size: 30px;
+}
+.menu-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 35px;
+    z-index: 2;
+    display: none;
+}
+
+
+/*Responsive media queries*/
+@media(max-width: 760px) {
+    /*Nav Bar Stuff for smaller screen*/
+    .menu-btn {
+        display: block;
+        transition: 0.3s;
+    }
+    .menu-btn:hover {
+        opacity: 0.5;
+    }
+    .right-icons {
+        margin-right: 50px;
+    }
+    .main-menu {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #f2f2f2;
+        width: 50%;
+        height: 100%;
+        transform: translateX(-500px);
+        transition: transform 0.4s ease-in-out;
+        opacity: 0.93;
+        padding: 20px;
+    }
+    .main-menu li {
+        padding: 10px;
+        border-bottom: #cccccc 1px solid;
+        font-size: 14px;
+    }
+    .main-menu li:last-child {
+        border-bottom: 0;
+    }
+    .main-menu li a:hover {
+        border-bottom: none;
+    }
+    .main-menu li:hover {
+        background: #ffffff;
+    }
+    .main-menu.show {
+        transform: translateX(-20px);
+    }
+    
+}
